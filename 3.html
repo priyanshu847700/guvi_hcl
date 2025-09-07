@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Research Agent</title>
+  <link rel="stylesheet" href="3.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>AI Research Agent</h1>
+      <p class="subtitle">Your smart assistant for quick research summaries</p>
+    </header>
+
+    <section class="input-section">
+      <textarea id="topicInput" placeholder="Enter your research topic or query here..."></textarea>
+      <button id="searchBtn" aria-label="Search research topic">
+        <span>Search</span>
+        <svg class="icon" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16z" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </section>
+
+    <section id="loading" class="loading hidden" aria-live="polite" aria-busy="true">
+      <div class="spinner"></div>
+      <p>Searching and summarizing...</p>
+    </section>
+
+    <section id="results" class="results hidden" aria-live="polite">
+      <h2>Summary</h2>
+      <div id="summary" class="summary"></div>
+
+      <h3>Sources</h3>
+      <ul id="sources" class="sources"></ul>
+
+      <button id="downloadBtn" class="download-btn" aria-label="Download summary as Markdown">Download Summary (Markdown)</button>
+    </section>
+  </div>
+
+  <script src="3.js"></script>
+</body>
+</html>
